@@ -1,0 +1,19 @@
+#box{
+    width: 100px;
+    border: 4px solid black;
+    background-color: aquamarine;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+p{
+    padding: 20px;
+    font-size: 40px;
+}
+.class-1{
+    background-color: aquamarine;
+}
+.class-2{   
+    color: white;
+}
