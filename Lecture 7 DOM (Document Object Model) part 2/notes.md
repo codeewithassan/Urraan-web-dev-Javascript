@@ -87,3 +87,44 @@ Once an element is created in memory, you can place it onto your page relative t
     const redundantBox = document.querySelector(".old-banner");
     redundantBox.remove(); 
     ```
+
+## 7. ClassList Manipulation (`node.classList`)
+
+The `classList` property returns a live collection of the class attributes of an element. Instead of overriding your entire class string (like `className` does), `classList` provides helpful methods to add, remove, toggle, or check classes cleanly.
+
+### Class Management Methods
+
+* **`node.classList.add("className")`**
+  * **Definition:** Adds one or more specified class names to an element. If the class already exists on the element, it will not be added again.
+  * **Syntax & Example:**
+    ```javascript
+    const alertBox = document.querySelector(".message");
+    alertBox.classList.add("success-theme"); // Adds the class
+    ```
+
+* **`node.classList.remove("className")`**
+  * **Definition:** Removes one or more specified class names from an element. If the class does not exist, no changes occur and no error is thrown.
+  * **Syntax & Example:**
+    ```javascript
+    const modal = document.querySelector(".popup");
+    modal.classList.remove("is-visible"); // Removes the class
+    ```
+
+* **`node.classList.toggle("className")`**
+  * **Definition:** Toggles a class name on or off. If the class exists, it removes it; if the class does not exist, it adds it. It returns `true` if the class was added, and `false` if it was removed.
+  * **Syntax & Example:**
+    ```javascript
+    const themeButton = document.querySelector("#theme-toggle");
+    // Adds 'dark-mode' if missing, removes it if present
+    document.body.classList.toggle("dark-mode"); 
+    ```
+
+* **`node.classList.contains("className")`**
+  * **Definition:** Checks if an element has a specific class name assigned to it. It returns a boolean value (`true` or `false`).
+  * **Syntax & Example:**
+    ```javascript
+    const sidebar = document.querySelector(".sidebar");
+    if (sidebar.classList.contains("active")) {
+      console.log("Sidebar is currently open!");
+    }
+    ```
